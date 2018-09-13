@@ -1,36 +1,56 @@
 <template>
   <k-toolbar-item icon="paint-brush" tooltip="NApp UI Test">
     <k-accordion>
-      <k-accordion-item title="Accordion item">
-        <k-dropdown icon="circle-o" title="Dropdown"></k-dropdown>
-       <k-select icon="link" title="Select"></k-select>
-        <k-button icon="search" title="Search">
-        </k-button>
-
+      <k-accordion-item title="Dropdown">
+        <k-dropdown icon="circle-o" title="Title dropdown"></k-dropdown>
+        <k-dropdown icon="circle-o"></k-dropdown>
       </k-accordion-item>
-    </k-accordion>
-    <k-accordion>
-      <k-accordion-item title="Accordion item">
-          <k-button-group>
-            <k-button tooltip="Map Background" icon="globe"></k-button>
-            <k-button tooltip="Image Background (disabled)" icon="photo" :is-disabled="true"></k-button>
-            <k-button tooltip="No Background" icon="window-close-o"></k-button>
-          </k-button-group>
-          <k-slider icon="adjust" :initial-value="mapOpacity" :action="emitMapOpacity"></k-slider>
-          <k-button-group>
-            <k-button tooltip="Map Background" icon="globe" title="Map Background"></k-button>
-            <k-button icon="search" title="Search"></k-button>
-            <k-button title="Test no Icon"></k-button>
-          </k-button-group>
-          <k-button tooltip="Map Background" icon="globe" title="Map Background"></k-button>
-          <k-button icon="search" title="Search"></k-button>
-          <k-button title="Test no Icon"></k-button>
-      </k-accordion-item>
-    </k-accordion>
 
+      <k-accordion-item title="Multiple Select" :checked="false">
+	<k-select icon="link" title="Form Multiple Select"></k-select>
+	<!-- FIXME: https://www.456bereastreet.com/lab/styling-form-controls-revisited/select-multiple-option/ -->
+      </k-accordion-item>
+
+      <k-accordion-item title="Input single" :checked="false">
+       <k-input icon="search" placeholder="Placeholder input"></k-input>
+       <k-input title="Label input"></k-input>
+      </k-accordion-item>
+
+      <k-accordion-item title="Slider" :checked="false">
+       <k-slider icon="adjust"></k-slider>
+       <k-slider title="Slider label"></k-slider>
+      </k-accordion-item>
+
+      <k-accordion-item title="Checkbox" :checked="false">
+       <k-checkbox icon="paint-brush" class="round"></k-checkbox>
+       <k-checkbox icon="adjust"></k-checkbox>
+       <k-checkbox title="Checkbox"></k-checkbox>
+       <k-checkbox icon="paint-brush" title="Label checkbox"></k-checkbox>
+      </k-accordion-item>
+
+      <k-accordion-item title="Buttons">
+       <k-button tooltip="Map Background" icon="globe" title="Map Background"></k-button>
+       <k-button-group>
+        <k-button tooltip="Map Background" icon="globe"></k-button>
+        <k-button tooltip="Image Background (disabled)" icon="photo" :is-disabled="true"></k-button>
+        <k-button tooltip="No Background" icon="window-close-o"></k-button>
+       </k-button-group>
+       <k-button-group>
+        <k-button title="Button 01"></k-button>
+        <k-button title="Button 02"></k-button>
+       </k-button-group>
+      </k-accordion-item>
+
+      <k-accordion-item title="TODO List" :checked="false">
+       <p>Textarea<br/>
+       Dialogs<br/>
+       Badges<br />
+       Tables<br/>
+       Tooltips<br/>
+       </p>
+      </k-accordion-item>
+
+    </k-accordion>
   </k-toolbar-item>
-
 </template>
 
-<script>
-</script>

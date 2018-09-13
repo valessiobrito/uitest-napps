@@ -3,7 +3,9 @@
 UI Test NApps
 """
 
-from kytos.core import KytosNApp, log
+from kytos.core import KytosNApp, log, rest
+from kytos.core.helpers import listen_to
+from flask import jsonify, request
 
 from napps.valessiobrito.uitest import settings
 
